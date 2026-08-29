@@ -1,10 +1,11 @@
 # Movie Sentiment Analysis
+# IMDB Movie Review Sentiment Analysis
 
 ## Project Description
 
-This project is an intermediate Natural Language Processing (NLP) project for movie review sentiment analysis. The objective is to classify movie reviews as Positive or Negative using text preprocessing, TF-IDF vectorization, and machine learning algorithms.
+This is an intermediate-level Natural Language Processing (NLP) project focused on sentiment analysis of movie reviews. It represents an escalation from basic spam classification to a more challenging real-world NLP task involving contextual language, sentiment, and negation.
 
-This project represents an escalation from basic spam classification to a more challenging real-world NLP text classification problem.
+The project classifies IMDB movie reviews as either **Positive** or **Negative** using text preprocessing, TF-IDF feature extraction, and multiple classical machine learning algorithms
 
 ## Objective
 
@@ -19,6 +20,7 @@ The project uses the IMDB Dataset of 50K Movie Reviews.
 - Negative reviews: 25,000
 - Classes: Positive and Negative
 - Dataset is perfectly balanced
+- Dataset Link: kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 - ## Preprocessing
 
 The reviews were cleaned and prepared using the following NLP preprocessing pipeline:
@@ -32,6 +34,18 @@ The reviews were cleaned and prepared using the following NLP preprocessing pipe
 7. Stopwords were removed while preserving important negation words such as `not`.
 8. Words were lemmatized using WordNetLemmatizer.
 9. The cleaned tokens were rejoined into text.
+10. ### Negation Handling Example
+
+Negation handling was used to preserve the meaning of sentiment-changing phrases.
+
+**Before preprocessing:**
+
+> I don't like this movie. It is not good.
+
+**After preprocessing:**
+
+> `not_like` `movie` `not_good`
+
 
 ### Negation Handling
 
@@ -104,6 +118,17 @@ Negation analysis shows the frequency and impact of negation-related tokens in t
 ## Comparison with Published Benchmarks
 
 Our best model, TF-IDF Trigram + Sublinear TF with LinearSVC, achieved **91.23% test accuracy**.
+## 📚 Comparison with Published Benchmarks
+
+Our best result achieved an accuracy of approximately **91%**, which compares favorably with the original Stanford IMDB benchmark.
+
+| Method | Accuracy |
+|---|---:|
+| Original Stanford paper | 88.89% |
+| Our best result | ~91% |
+| State-of-the-art classical ML | ~93% |
+
+Our best model achieved **91.23% accuracy**, outperforming the original Stanford benchmark of **88.89%** while remaining close to the reported performance of state-of-the-art classical machine learning methods (~93%).
 
 | Approach | Accuracy |
 |---|---:|
@@ -172,3 +197,15 @@ The model achieved strong performance on both short and long reviews:
 
 - Short reviews (< 50 words): 92.21% accuracy
 - Long reviews (> 200 words): 91.48% accuracy
+- ## 📊 Results
+
+The following table shows the accuracy of all 12 combinations of TF-IDF configurations and machine learning algorithms.
+
+| TF-IDF Configuration | LinearSVC | Logistic Regression | Multinomial Naive Bayes |
+|---|---:|---:|---:|
+| Unigram | 90.14% | 90.24% | 86.83% |
+| Unigram + Sublinear TF | 90.06% | 90.59% | 87.06% |
+| Unigram + Bigram + Sublinear TF | 90.65% | 90.92% | 88.42% |
+| Trigram + Sublinear TF | 91.23% | 91.03% | 88.84% |
+
+**Best Accuracy:** 91.23% — Trigram + Sublinear TF with LinearSVC.
