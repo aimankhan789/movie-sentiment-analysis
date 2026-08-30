@@ -89,30 +89,32 @@ The final LinearSVC model achieved:
 - Mean 5-Fold Cross-Validation Accuracy: **90.43%**
 - Cross-Validation Standard Deviation: **0.16%**
 
-The close cross-validation performance indicates that the model provides consistent results across different validation folds.
+The close cross-validation performance indicates that the model provides consistent results across different validation folds
 ## Visual Results
 
 ### Algorithm Comparison Heatmap
 
 The heatmap shows the accuracy of the three machine learning algorithms across different TF-IDF configurations.
 
-
+![Algorithm Comparison Heatmap](images/algorithm_comparison_heatmap.png)
 
 ### Confusion Matrix
 
 The confusion matrix shows the correct and incorrect predictions made by the final LinearSVC model on the test dataset.
 
-
+![Confusion Matrix](images/confusion_matrix.png)
 
 ### Most Informative Words
 
 The most informative words show which features contributed strongly toward positive and negative sentiment predictions.
 
-
+![Most Informative Words](images/most_informative_words.png)
 
 ### Negation Analysis
 
 Negation analysis shows the frequency and impact of negation-related tokens in the reviews.
+
+![Negation Tokens](images/negation_tokens.png)
 
 
 ## Comparison with Published Benchmarks
