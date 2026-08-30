@@ -1,5 +1,4 @@
 # Movie Sentiment Analysis
-# IMDB Movie Review Sentiment Analysis
 
 ## Project Description
 
@@ -20,7 +19,11 @@ The project uses the IMDB Dataset of 50K Movie Reviews.
 - Negative reviews: 25,000
 - Classes: Positive and Negative
 - Dataset is perfectly balanced
-- Dataset Link: kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+- - Dataset Link: [IMDB Dataset of 50K Movie Reviews](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
+  - ## Kaggle Notebook
+
+[View the Kaggle Notebook](https://www.kaggle.com/code/aimanafzal123/movie-review-sentiment-analysis)
+- Average review length: approximately 230 words
 - ## Preprocessing
 
 The reviews were cleaned and prepared using the following NLP preprocessing pipeline:
@@ -44,20 +47,7 @@ Negation handling was used to preserve the meaning of sentiment-changing phrases
 
 **After preprocessing:**
 
-> `not_like` `movie` `not_good`
-
-
-### Negation Handling
-
-Negation handling was used because words such as "not" can completely change the sentiment of a phrase.
-
-**Before preprocessing:**
-
-> I don't like this movie. It is not good.
-
-**After preprocessing:**
-
-> i do_not like this movie it is not_good
+> `not_like` `movie` `not_good
 
 This allows the model to treat expressions such as `not_good` as a sentiment-related feature instead of losing the effect of negation.
 ## Model Performance
@@ -107,15 +97,6 @@ Our best result achieved an accuracy of approximately **91%**, which compares fa
 
 Our best model achieved **91.23% accuracy**, outperforming the original Stanford benchmark of **88.89%** while remaining close to the reported performance of state-of-the-art classical machine learning methods (~93%).
 
-| Approach | Accuracy |
-|---|---:|
-| Original Stanford IMDB paper | 88.89% |
-| Our best model — TF-IDF Trigram + Sublinear TF + LinearSVC | 91.23% |
-| State-of-the-art classical ML | ~93% |
-
-Our result is higher than the original Stanford benchmark and is competitive with classical machine learning approaches.
-
-The use of TF-IDF trigrams helped capture short phrase-level context, while sublinear TF reduced the influence of very frequent terms.
 ## Limitations
 
 Although the final model achieved strong performance, the project has some limitations:
@@ -127,7 +108,7 @@ Although the final model achieved strong performance, the project has some limit
 - Genre or writing-style differences may affect model performance.
 - The model does not truly understand the meaning of a review like a human reader.
 - Performance may change when the model is applied to a different dataset or domain.
-- ## Conclusion
+ ## Conclusion
 
 This project successfully demonstrates how Natural Language Processing can be used for movie review sentiment classification.
 
@@ -156,10 +137,6 @@ The project can be improved further in the following ways:
 - Use additional evaluation metrics and error analysis techniques.
 
 BERT and other transformer-based models could address some of the contextual limitations of traditional bag-of-words approaches.
-## Kaggle Notebook
-
-[View the Kaggle Notebook](https://www.kaggle.com/code/aimanafzal123/movie-review-sentiment-analysis)
-- Average review length: approximately 230 words
 - ## Error Analysis
 
 The final model was evaluated on the test set to understand its mistakes.
