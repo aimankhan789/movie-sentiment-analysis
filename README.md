@@ -90,21 +90,6 @@ The final LinearSVC model achieved:
 - Cross-Validation Standard Deviation: **0.16%**
 
 The close cross-validation performance indicates that the model provides consistent results across different validation folds
-## Visual Results
-
-## Exploratory Data Analysis
-
-### Class Distribution
-
-The dataset is perfectly balanced, with 25,000 positive reviews and 25,000 negative reviews.
-
-![Class Distribution](images/class_distribution.png)
-
-### Review Length Distribution
-
-The distribution of review word counts is shown below for positive and negative reviews.
-
-![Review Length Distribution](images/review_length_by_class.png)
 
 
 ## Comparison with Published Benchmarks
