@@ -92,29 +92,19 @@ The final LinearSVC model achieved:
 The close cross-validation performance indicates that the model provides consistent results across different validation folds
 ## Visual Results
 
-### Algorithm Comparison Heatmap
+## Exploratory Data Analysis
 
-The heatmap shows the accuracy of the three machine learning algorithms across different TF-IDF configurations.
+### Class Distribution
 
-![Algorithm Comparison Heatmap](images/algorithm_comparison_heatmap.png)
+The dataset is perfectly balanced, with 25,000 positive reviews and 25,000 negative reviews.
 
-### Confusion Matrix
+![Class Distribution](images/class_distribution.png)
 
-The confusion matrix shows the correct and incorrect predictions made by the final LinearSVC model on the test dataset.
+### Review Length Distribution
 
-![Confusion Matrix](images/confusion_matrix.png)
+The distribution of review word counts is shown below for positive and negative reviews.
 
-### Most Informative Words
-
-The most informative words show which features contributed strongly toward positive and negative sentiment predictions.
-
-![Most Informative Words](images/most_informative_words.png)
-
-### Negation Analysis
-
-Negation analysis shows the frequency and impact of negation-related tokens in the reviews.
-
-![Negation Tokens](images/negation_tokens.png)
+![Review Length Distribution](images/review_length_by_class.png)
 
 
 ## Comparison with Published Benchmarks
